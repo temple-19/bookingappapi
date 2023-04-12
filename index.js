@@ -36,13 +36,13 @@ app.use(cors({
 }));
 
 
-// // Serve static files from the build directory
-// app.use(express.static(path.join(__dirname, 'build')));
+// Serve static files from the build directory
+app.use(express.static(path.join(__dirname, 'build')));
 
-// // Serve the index.html file for any request that doesn't match a static file or API endpoint
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+// Serve the index.html file for any request that doesn't match a static file or API endpoint
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
