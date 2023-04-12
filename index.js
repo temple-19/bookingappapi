@@ -32,7 +32,8 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://chipper-pie-6f9780.netlify.app'
+  origin: 'https://chipper-pie-6f9780.netlify.app',
+  credentials: true
 }));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://chipper-pie-6f9780.netlify.app');
