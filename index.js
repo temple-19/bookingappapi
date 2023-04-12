@@ -34,6 +34,10 @@ app.use(express.json());
 app.use(cors({
   origin: 'https://chipper-pie-6f9780.netlify.app'
 }));
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://chipper-pie-6f9780.netlify.app');
+  next();
+});
 
 
 // Serve static files from the build directory
