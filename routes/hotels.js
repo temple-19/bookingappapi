@@ -11,19 +11,19 @@ import {
 } from '../controllers/hotel.js';
 import Hotel from '../models/Hotel.js';
 import { verifyAdmin } from '../utils/verifyToken.js';
-const hotelsRoute = express.Router();
+const router = express.Router();
 
 //create
-hotelsRoute.post('/', verifyAdmin, createHotel);
+router.post('/', verifyAdmin, createHotel);
 //update
-hotelsRoute.put('/:id', verifyAdmin, updateHotel);
+router.put('/:id', verifyAdmin, updateHotel);
 //delete
-hotelsRoute.delete('/:id', verifyAdmin, deleteHotel);
+router.delete('/:id', verifyAdmin, deleteHotel);
 //get
 router.get('/find/:id', getHotel);
 //getall
-hotelsRoute.get('/', getHotels);
-hotelsRoute.get('/countByCity', countByCity);
-hotelsRoute.get('/countByType', countByType);
-hotelsRoute.get('/room/:id', getHotelRooms);
-export default hotelsRoute;
+router.get('/', getHotels);
+router.get('/countByCity', countByCity);
+router.get('/countByType', countByType);
+router.get('/room/:id', getHotelRooms);
+export default router;
