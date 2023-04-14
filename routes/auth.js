@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/', (req, res) => {
+router.get('/login', (req, res) => {
   res.send('Welcome to the users page!');
 });
 
