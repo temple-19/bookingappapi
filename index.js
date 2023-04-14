@@ -58,7 +58,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(`https://chipper-pie-6f9780.netlify.app/`, () => {
+app.listen(`https://chipper-pie-6f9780.netlify.app`, () => {
   connect();
   console.log('connected to backend...');
 });
