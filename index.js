@@ -39,7 +39,7 @@ app.use(cors({
   credentials: true
 }));
 
-app.use('https://dark-frog-dungarees.cyclic.app/api/auth', authRoute);
+app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
