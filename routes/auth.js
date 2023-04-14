@@ -6,7 +6,9 @@ const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/login', rest)
+router.get('/login', (req, res) => {
+  res.send('Hello, World!');
+}))
 
 
 export default router;
