@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.post('https://chipper-pie-6f9780.netlify.app/register', register);
-router.post('https://chipper-pie-6f9780.netlify.app/login', login);
+router.post('https://dark-frog-dungarees.cyclic.app/api/register', register);
+router.post('https://dark-frog-dungarees.cyclic.app/api/login', login);
 
 export default router;
