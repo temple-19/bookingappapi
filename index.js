@@ -45,19 +45,6 @@ app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
 
 
-app.use(express.static('public'));
-
-// Serve static files from the build directory
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Serve the index.html file for any request that doesn't match a static file or API endpoint
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-
-
-
-
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || 'Something went wrong';
