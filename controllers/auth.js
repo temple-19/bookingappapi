@@ -47,11 +47,7 @@ export const login = async (req, res, next) => {
 };
 
 export const rest = async (req, res, next) => {
-  try {
     console.log('Hello');
-    res.status(200).send('Hello');
-  } catch (err) {
-    next(err);
-  }
+    res.send('Hello');
 };
 
