@@ -45,6 +45,10 @@ app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
 
 
+app.get('/login', function (req, res) {
+  res.sendFile(path.join(__dirname, '../client/src/pages/login/Login.jsx'));
+});
+
 app.use((err, req, res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || 'Something went wrong';
