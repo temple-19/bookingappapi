@@ -31,13 +31,20 @@ app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
-
 app.use(cors({
   origin: 'https://chipper-pie-6f9780.netlify.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Authorization', 'Content-Type'],
   credentials: true
 }));
+
+// Serve the static files in the build directory
+app.use(express.static(path.join(__dirname, 'build')));
+
+// Serve the index.html file for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
