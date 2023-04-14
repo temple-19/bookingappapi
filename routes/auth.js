@@ -6,8 +6,9 @@ const router = express.Router();
 
 router.post('/register', register);
 router.post('/login', login);
-router.get('/login', console.log("There is hope")
-)
+router.get('/', (req, res) => {
+  res.send('Welcome to the users page!');
+});
 
 
 export default router;
