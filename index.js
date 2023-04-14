@@ -45,7 +45,7 @@ app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
 
 
-app.get('/login', function (req, res) {
+app.get('https://chipper-pie-6f9780.netlify.app/login', function (req, res) {
   res.sendFile(path.join(__dirname, '../client/src/pages/login/Login.jsx'));
 });
 
