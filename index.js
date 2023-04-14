@@ -60,10 +60,10 @@ app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
 
-app.use('https://chipper-pie-6f9780.netlify.app/api/auth', authRoute);
-app.use('https://chipper-pie-6f9780.netlify.app/api/users', usersRoute);
-app.use('https://chipper-pie-6f9780.netlify.app/api/hotels', hotelsRoute);
-app.use('https://chipper-pie-6f9780.netlify.app/api/rooms', roomsRoute);
+app.use('https://chipper-pie-6f9780.netlify.app/auth', authRoute);
+app.use('https://chipper-pie-6f9780.netlify.app/users', usersRoute);
+app.use('https://chipper-pie-6f9780.netlify.app/hotels', hotelsRoute);
+app.use('https://chipper-pie-6f9780.netlify.app/rooms', roomsRoute);
 
 
 
