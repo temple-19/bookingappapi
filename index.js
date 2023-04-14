@@ -60,9 +60,7 @@ app.use('/api/users', usersRoute);
 app.use('/api/hotels', hotelsRoute);
 app.use('/api/rooms', roomsRoute);
 
-app.get('/hotels', (req, res) => {
-  res.send('hello');
-});
+
 
 
 // app.get('*', (req, res) => {
