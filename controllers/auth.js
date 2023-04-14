@@ -46,7 +46,7 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const rest = async (req, res, next) => {
+export const rest = (req, res) => {
     console.log('Hello');
     res.send('Hello');
 };
