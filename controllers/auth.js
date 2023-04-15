@@ -45,8 +45,3 @@ export const login = async (req, res, next) => {
     next(err);
   }
 };
-
-export const rest = (req, res) => {
-    res.send('Hello');
-};
-
