@@ -38,13 +38,6 @@ app.use(cors({
   credentials: true
 }));
 
-// Serve the static files in the build directory
-app.use(express.static(path.join(__dirname, 'build')));
-
-// Serve the index.html file for all other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 app.use('/api/auth', authRoute);
 app.use('/api/users', usersRoute);
